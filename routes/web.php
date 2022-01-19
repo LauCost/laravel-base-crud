@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::get('/comics', 'ComicController@index')->name('comics');
 Route::get('comics/{comic}', 'ComicController@show')->name('comic');
+
+Route::resource('posts', 'Admin\PostController');
