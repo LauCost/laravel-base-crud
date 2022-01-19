@@ -8,7 +8,7 @@
         </h1>
 
         <form action="{{ route('admin.comics.store') }}" method="post">
-
+            @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo fumetto</label>
                 <input type="text" name="title" id="title" class="form-control" aria-describedby="titleHelper"
