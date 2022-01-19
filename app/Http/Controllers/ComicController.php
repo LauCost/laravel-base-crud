@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\Comic;
-
 namespace App\Http\Controllers;
+
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
@@ -10,9 +10,9 @@ class ComicController extends Controller
     public function index()
     {
 
-        ddd(Comic::all());
+        //ddd(Comic::all());
 
-        /* $comics = Comic::all(); */
+        $comics = Comic::all();
 
         return view('comics.index', compact('comics'));
     }

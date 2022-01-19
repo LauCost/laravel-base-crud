@@ -1,11 +1,11 @@
-//
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /************ Variabili ************/
+
 .cont {
   width: 70%;
   margin: auto;
@@ -21,58 +21,49 @@
   display: flex;
 }
 
-.flex_wrap{
+.flex_wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0;
 }
+
 /************ /Variabili ************/
-
-
-
 
 /************ Header ************/
 
-header {
-  .cont_img_nav {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+header .cont_img_nav {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.cont_img_header{
-    width: 70px;
-
-    img {
-    padding: 20px 0;
-    width: 100%;
-  }
+.cont_img_header {
+  width: 70px;
 }
 
-nav {
-  a {
-    padding: 47px 0;
-    margin: 0 18px;
-    text-decoration: none;
-    color: #464646;
-    font-weight: 600;
-  }
+.cont_img_header img {
+  padding: 20px 0;
+  width: 100%;
+}
 
-  .attivo {
-    color: #0282f9;
-    border-bottom: 3px solid #0282f9;
-  }
+nav a {
+  padding: 47px 0;
+  margin: 0 18px;
+  text-decoration: none;
+  color: #464646;
+  font-weight: 600;
+}
+
+nav .attivo {
+  color: #0282f9;
+  border-bottom: 3px solid #0282f9;
 }
 
 /************ /Header ************/
-
-
 
 /************ Main ************/
 
@@ -83,7 +74,7 @@ main {
 .jumbo {
   width: 100%;
   height: 400px;
-  background-image: url("../images/jumbotron.jpg");
+  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -102,23 +93,24 @@ main {
   font-size: 21px;
 }
 
-
 .card {
   width: 13%;
   margin: 30px 15px;
+}
 
-  img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    object-position: top;
-  }
+.card img {
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
 
-  p {
-    margin: 15px 0;
-    color: #ffffff;
-    font-size: 12.5px;
-  }
+.card p {
+  margin: 15px 0;
+  color: #ffffff;
+  font-size: 12.5px;
 }
 
 .load_series {
@@ -130,8 +122,6 @@ main {
   font-weight: bold;
 }
 
-
-
 .blue {
   background-color: #0282f9;
 }
@@ -140,43 +130,43 @@ main {
   display: flex;
   align-items: center;
   padding: 50px 0;
-
-  img {
-    width: 60px;
-  }
-
-  p {
-    color: #ffffff;
-    margin: 0 15px;
-  }
 }
 
+.utility img {
+  width: 60px;
+}
+
+.utility p {
+  color: #ffffff;
+  margin: 0 15px;
+}
 
 /************ /Main ************/
 
 /************ /Footer ************/
 
 .background {
-  background-image: url("../images/footer-bg.jpg");
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
   background-size: cover;
+}
 
-  h3 {
-    color: #ffffff;
-    margin: 10px 0;
-  }
-  ul {
-    list-style: none;
+.background h3 {
+  color: #ffffff;
+  margin: 10px 0;
+}
 
-    li {
-      color: #779595;
-      margin: 5px 0;
-      font-size: 12px;
-    }
-  }
+.background ul {
+  list-style: none;
+}
+
+.background ul li {
+  color: #779595;
+  margin: 5px 0;
+  font-size: 12px;
 }
 
 .links {
-  background-image: url("../images/dc-logo-bg.png");
+  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -205,16 +195,18 @@ main {
 
 .social {
   align-items: center;
-
-  p {
-    color: #0282f9;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 10px;
-  }
-
-  img {
-    margin: 0 10px;
-  }
 }
+
+.social p {
+  color: #0282f9;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.social img {
+  margin: 0 10px;
+}
+
 /************ /Footer ************/
+
