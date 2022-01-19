@@ -113,6 +113,10 @@ main {
   font-size: 12.5px;
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .load_series {
   padding: 10px 65px;
   margin: 10px 0;

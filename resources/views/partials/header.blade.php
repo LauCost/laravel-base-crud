@@ -4,12 +4,12 @@
 
         <div class="cont_img_header">
 
-            <img src=" {{ asset('images/dc-logo.png') }} " alt="" />
+            <img src=" {{ asset('images/dc-logo-bg.png') }} " alt="Test" />
         </div>
 
         <nav>
-            <a href="#">CHARACTERS</a>
-            <a class="attivo" href="#">COMICS</a>
+            <a href="{{ route('home') }}">HOME</a>
+            <a class="attivo" href="{{ route('comics') }}">COMICS</a>
             <a href="#">MOVIES</a>
             <a href="#">TV</a>
             <a href="#">GAMES</a>
