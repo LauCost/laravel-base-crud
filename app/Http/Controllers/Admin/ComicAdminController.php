@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class ComicAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,9 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::all();
-        return view('admin.post.index', compact('posts'));
+        $comics = Comic::all();
+        return view('admin.comics.index', compact('comics'));
+
     }
 
     /**
@@ -28,6 +29,8 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('admin.comics.create');
+
     }
 
     /**
@@ -39,15 +42,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Comic $comic)
     {
         //
     }
@@ -55,10 +59,10 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Comic $comic)
     {
         //
     }
@@ -67,10 +71,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Comic $comic)
     {
         //
     }
@@ -78,10 +82,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Comic $comic)
     {
         //
     }
