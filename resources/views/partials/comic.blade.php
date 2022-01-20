@@ -1,4 +1,4 @@
-<div class="card">
+<div class="cardd">
     <a href="{{ route('comic', $comic->id) }}">
 
         <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" />

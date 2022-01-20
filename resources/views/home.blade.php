@@ -4,7 +4,11 @@
 
 @section('content')
 
-    <h1 class="Test_admin">Welcome to dc comics</h1>
+    <main>
+
+        <h1 class="Test_admin">Welcome to dc comics</h1>
+
+    </main>
 
 
 @endsection
