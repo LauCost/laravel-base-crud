@@ -4,7 +4,7 @@
 
     <main class="admin_main ">
 
-        <h1 class="">
+        <h1 class="text-center">
             Tutti i Comics presenti nel DB
         </h1>
 
@@ -15,9 +15,15 @@
                 @include('partials/comicAdmin')
 
             @endforeach
-            <a href="{{ route('admin.comics.create') }}">
-                <button class="load_series">Create new Comic</button>
-            </a>
+            <div class="admin_pages">
+
+                {{ $comics->links() }}
+
+                <a href="{{ route('admin.comics.create') }}">
+                    <button class="load_series">Create new Comic</button>
+                </a>
+
+            </div>
 
         </div>
 

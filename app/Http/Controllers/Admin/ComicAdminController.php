@@ -16,7 +16,7 @@ class ComicAdminController extends Controller
     public function index()
     {
         //
-        $comics = Comic::all();
+        $comics = Comic::paginate(4);
         return view('admin.comics.index', compact('comics'));
 
     }
@@ -43,16 +43,20 @@ class ComicAdminController extends Controller
     {
         //
         //ddd($request->all());
+        $validated_data = $request->validate([
+            'title' => 'required|unique:comics',
+            'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'nullable',
+            'series' => 'nullable',
+            'sale_date' => 'required',
+            'type' => 'required',
 
-        $comic = new Comic();
-        $comic->title = $request->title;
-        $comic->description = $request->description;
-        $comic->thumb = $request->thumb;
-        $comic->price = $request->price;
-        $comic->series = $request->series;
-        $comic->sale_date = $request->sale_date;
-        $comic->type = $request->type;
-        $comic->save();
+        ]);
+
+        //ddd($validated_data);
+
+        Comic::create($validated_data);
 
         return redirect()->route('admin.comics.index');
 

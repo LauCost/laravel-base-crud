@@ -12328,6 +12328,12 @@ main {
   background-color: white;
 }
 
+.admin_pages {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 /************ /Main ************/
 
 /************ /Footer ************/
