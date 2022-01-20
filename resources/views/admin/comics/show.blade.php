@@ -32,7 +32,7 @@
                     <td>{{ $comic->sale_date }}</td>
                     <td>{{ $comic->type }}</td>
                     <td>
-                        <a href="{{ route('admin.comics.edit') }}">Edit</a> Delete
+                        <a href="{{ route('admin.comics.edit', $comic->id) }}">Edit</a> Delete
                     </td>
 
                 </tr>

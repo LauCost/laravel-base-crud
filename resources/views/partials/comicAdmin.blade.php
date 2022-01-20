@@ -33,7 +33,7 @@
             <td>{{ $comic->updated_at }}</td>
             <td>
                 <a href="{{ route('admin.comics.show', $comic->id) }}">View </a>
-                <a href="{{ route('admin.comics.edit') }}">Edit </a>
+                <a href="{{ route('admin.comics.edit', $comic->id) }}">Edit </a>
                 <a href="">Delete</a>
             </td>
 

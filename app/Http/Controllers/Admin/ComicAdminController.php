@@ -84,6 +84,9 @@ class ComicAdminController extends Controller
     public function edit(Comic $comic)
     {
         //
+
+        return view('admin.comics.edit', compact('comic'));
+
     }
 
     /**
@@ -96,6 +99,22 @@ class ComicAdminController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+
+        $validated_data = $request->validate([
+            'title' => 'required|unique:comics',
+            'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'nullable',
+            'series' => 'nullable',
+            'sale_date' => 'required',
+            'type' => 'required',
+
+        ]);
+
+        $comic->update($validated_data);
+
+        return redirect()->route('admin.comics.index');
+
     }
 
     /**
