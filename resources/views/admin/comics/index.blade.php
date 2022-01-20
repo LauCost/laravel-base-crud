@@ -8,7 +8,15 @@
             Tutti i Comics presenti nel DB
         </h1>
 
+
+
         <div class="cont flex_wrap">
+
+            @if (session('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
 
             @foreach ($comics as $comic)
 

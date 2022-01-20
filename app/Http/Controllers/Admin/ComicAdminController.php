@@ -58,7 +58,7 @@ class ComicAdminController extends Controller
 
         Comic::create($validated_data);
 
-        return redirect()->route('admin.comics.index');
+        return redirect()->route('admin.comics.index')->with('message', 'Il nuovo fumetto è stato aggiunto correttamente');
 
     }
 
@@ -101,7 +101,7 @@ class ComicAdminController extends Controller
         //
 
         $validated_data = $request->validate([
-            'title' => 'required|unique:comics',
+            'title' => 'required',
             'description' => 'nullable',
             'thumb' => 'nullable',
             'price' => 'nullable',
@@ -113,7 +113,7 @@ class ComicAdminController extends Controller
 
         $comic->update($validated_data);
 
-        return redirect()->route('admin.comics.index');
+        return redirect()->route('admin.comics.index')->with('message', 'Il fumetto è stato modificato correttamente');
 
     }
 
@@ -129,7 +129,7 @@ class ComicAdminController extends Controller
 
         $comic->delete();
 
-        return redirect()->route('admin.comics.index');
+        return redirect()->route('admin.comics.index')->with('message', 'Il fumetto è stato eliminato correttamente');
 
     }
 }
